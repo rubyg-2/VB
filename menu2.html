@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Menu</title>
+    <link rel="stylesheet" href="menu2.css">
+    <script defer src="script2.js"></script>
+
+    </head>
+    <body>
+        <!-- Preloading Video -->
+        <div id="preloader">
+            <div id="video-container">
+                <video id="loader-video" autoplay muted>
+                    <source src="assets/vb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <!-- Main Content (initially hidden) -->
+        <div id="main-content" style="display: none;">
+        <header>
+            <h1>Menu</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="lore.html">Lore</a></li>
+                    <li><a href="menu2.html">Menu</a></li>
+
+                </ul>
+            </nav>
+        </header>
+        <section>
+
+<section>
+    <h2>Order Your Virtual Drink</h2>
+    <div id="menu-list">
+
+        <div class="menu-item" onclick="openModal('Our 6th summer')">
+            <img src="drinks/6thsummer.png" alt="Our 6th summer">
+            <p>Our 6th summer - $6.25</p>
+        </div>
+
+        <div class="menu-item" onclick="openModal('La Vida Loca')">
+            <img src="drinks/berry.png" alt="La Vida Loca">
+            <p>La Vida Loca - $4.25</p>
+        </div>
+
+        <div class="menu-item" onclick="openModal('Moonlit Dreams')">
+            <img src="drinks/MoonlitDreams.png" alt="Moonlit Dreams">
+            <p>Moonlit Dreams - $4.25</p>
+        </div>
+
+
+
+        <div class="menu-item" onclick="openModal('Pink Crush')">
+            <img src="/drinks/rizzB.png" alt="bamby pink deer">
+            <p>Pink Crush - $5.25</p>
+        </div>
+
+
+
+        <div class="menu-item" onclick="openModal('Crimson Rush')">
+            <img src="drinks/rizzE.png" alt="eunho red wolf">
+            <p>Crimson Rush - $5.25</p>
+        </div>
+
+
+        <div class="menu-item" onclick="openModal('Fates Disguised')">
+            <img src="drinks/rizzH.png" alt="hamin black cat">
+            <p>Fates Disguised - $5.25</p>
+
+        </div>
+
+
+
+        <div class="menu-item" onclick="openModal('Violet Kiss')">
+            <img src="drinks/rizzN.png" alt="noah purple lama">
+            <p>Violet Kiss - $5.25</p>
+        </div>
+
+
+
+        <div class="menu-item" onclick="openModal('Blue Bliss')">
+            <img src="drinks/rizzY.png" alt="yejun blue dolphin">
+            <p>Blue Bliss - $5.25</p>
+        </div>
+
+        <div class="menu-item" onclick="openModal('MEYMU Cookie')">
+            <img src="cookies/MEYMU.png" alt="cookie black hamin">
+            <p>MEYMU Cookie - $1</p>
+        </div>
+
+        <div class="menu-item" onclick="openModal('MEOWMI Cookie')">
+            <img src="cookies/MEOWMI.png" alt="cookie black">
+            <p>MEOWMI Cookie - $1</p>
+        </div>
+
+
+
+        <div class="menu-item" onclick="openModal('MIIMU Cookie')">
+            <img src="cookies/MIIMU.png" alt="cookie pink bamby">
+            <p>MIIMU Cookie - $1</p>
+        </div>
+
+        <div class="menu-item" onclick="openModal('MOI Cookie')">
+            <img src="cookies/MOI.png" alt="cookie yello noah">
+            <p>MOI Cookie - $1</p>
+        </div>
+
+        <div class="menu-item" onclick="openModal('MUHMO Cookie')">
+            <img src="cookies/MUHMO.png" alt="cookie red eunho">
+            <p>MUHMO Cookie - $1</p>
+        </div>
+
+
+
+                <!-- Shopping Cart Icon -->
+                <div id="cart-icon" onclick="toggleSidebar()">
+                    🛒 <span id="cart-count">0</span>
+                </div>
+
+                <!-- Sidebar for the Cart -->
+                <div id="cart-sidebar" class="sidebar">
+                    <button class="closebtn" onclick="closeSidebar()">×</button>
+                    <h2>Your Order</h2>
+                    <ul id="cart"></ul>
+                    <span id="total"></span>
+                    <button onclick="placeOrder()">Place Order</button>
+                </div>
+
+                <!-- Pop-up Modal -->
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <h2 id="modal-title"></h2>
+                        <img id="modal-image" src="" alt="Drink Image" style="width: 200px; height: auto;">
+                        <p id="modal-description"></p>
+                        <div id="custom-options"></div>
+                        <button onclick="addToCart()">Add to Order</button>
+                    </div>
+                </div>
+            </section>
+
+            <script>
+                // Get the video element
+                const video = document.getElementById('loader-video');
+
+                // Event listener for when the video ends
+                video.addEventListener('ended', function() {
+                    // Hide the preloader and show the main content
+                    document.getElementById('preloader').style.display = 'none';
+                    document.getElementById('main-content').style.display = 'block';
+                });
+            </script>
+            
+        </body>
+        </html>

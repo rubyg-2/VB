@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLAVE Café</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Preloader with local video -->
+    <div id="preloader">
+        <div id="video-container">
+            <video id="loader-video" width="100%" height="100%" autoplay>
+                <source src="assets/intro-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+        </div>
+    </div>
+
+    <!-- Main Content Section (initially hidden) -->
+    <div id="main-content" style="display: none;">
+        <header>
+            <h1>Welcome to Virtual Brew</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="lore.html">Lore</a></li>
+                    <li><a href="menu2.html">Menu</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <h2>Experience a Café Beyond Reality</h2>
+            <p>Inspired by the virtual group PLAVE, we bring a futuristic café experience with a blend of reality and digital connection.</p>
+        </section>
+    </div>
+
+    <script>
+        // Get the video element
+        const video = document.getElementById('loader-video');
+
+        // Event listener for when the video ends
+        video.addEventListener('ended', function() {
+            // Fade out effect
+            document.getElementById('preloader').classList.add('fade-out');
+
+            // After fade-out, hide preloader and show the main content
+            setTimeout(function() {
+                document.getElementById('preloader').style.display = 'none'; // Hide the preloader
+                document.getElementById('main-content').style.display = 'block'; // Show main content
+            }, 1000); // Wait for 1 second to let the fade-out effect complete
+        });
+    </script>
+</body>
+</html>

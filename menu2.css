@@ -1,0 +1,284 @@
+/* Style the menu items */
+.menu-item {
+    display: inline-block;
+    text-align: center;
+    margin: 15px;
+    cursor: pointer;
+    width: 200px;
+}
+
+.menu-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+
+
+.menu-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    width: 50%; /* You can adjust this value to control the width of the modal */
+    max-width: 500px; /* Optional: Maximum width of the modal */
+  
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+transform: translate(-50%,-50%);
+}
+
+/* Close button */
+.close {
+    /*position: absolute;*/
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* Cart icon 
+#cart-icon {
+    font-size: 24px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}*/
+
+/* Sidebar styles */
+.sidebar {
+    height: 100%;
+    width: 0; /* Sidebar is initially collapsed */
+    position: fixed;
+    top: 0;
+    right: 0; /* Align to the right */
+    background-color: #111;
+    overflow-y: auto; /* Ensure content doesn't overflow horizontally */
+    transition: 0.3s;
+    padding-top: 60px;
+    color: white;
+    z-index: 9999; /* Ensure it's above the content */
+    margin-left: 20px; /* Add margin to create space between the sidebar and the left side */
+    padding-left: 20px;
+}
+
+/* When the sidebar is opened */
+.sidebar.open {
+    width: 280px; /* Set the width when the sidebar is open */
+    right: 0; /* Ensure it stays at the right edge */
+}
+
+/* Close button (X) */
+.sidebar .closebtn {
+    position: absolute;
+    top: 10px; /* Ensure it's at the top of the sidebar */
+    left: 15px; /* Space from the left edge */
+    font-size: 36px;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Sidebar links */
+.sidebar a {
+    padding: 8px 8px 8px 50px; /* Increased left padding to 50px */
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Sidebar button */
+.sidebar button {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #ff69b4; /* Soft pink */
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sidebar button:hover {
+    background-color: #f06292; /* Lighter pink for hover */
+}
+
+#cart-sidebar span#total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px; /* Adds space between total and the order items */
+}
+
+
+
+#cart-sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px; /* Adds space below the heading */
+}
+
+/* Cart icon positioning */
+#cart-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 40px; /* Adjust cart icon position to stay inside the page */
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px gray;
+    cursor: pointer;
+    z-index: 10000; /* Ensure it’s above other elements */
+}
+
+/* Cart list */
+#cart {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Total amount text */
+#total {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* Cart list */
+#cart {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Total amount text */
+#total {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#cart-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px gray;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+
+
+/* NAVIGATION BAR STYLING */
+nav {
+    background-color: #1e1e1e; /* Dark background */
+    padding: 15px 0;
+    position: fixed; /* Makes the nav bar stay at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+   /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);  Optional shadow effect */
+
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #f5f5f5; /* Light text */
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ff69b4; /* Soft pink hover effect */
+    color: #1e1e1e;
+    border-radius: 5px;
+}
+
+
+
+/* Preloader Styles *//* Preloader Styles */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 1s ease-in-out; /* Smooth fade-out */
+}
+
+#video-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#loader-video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1; /* Initially, the video is fully visible */
+    transition: opacity 1s ease-in-out; /* Smooth fade transition */
+}
+
+/* Main Content Styles */
+#main-content {
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Ensure it doesn't interact with the layout */
+    transition: opacity 1s ease-in-out, visibility 0s 1s; /* Smooth fade-in with delay for visibility */
+}
+
+#main-content.show {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Make the content interactable */
+}

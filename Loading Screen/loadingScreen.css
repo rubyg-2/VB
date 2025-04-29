@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle at center, #0d1b2a, #1b263b, #415a77, #778da9);
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.decipher-text {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 10px;
+  font-weight: bold;
+  background-image: linear-gradient(90deg, #ff66ff, #ffccff, #00ccff, #6600ff, #ff66ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(25, 105, 180, 0.8), 0 0 40px rgba(255, 105, 180, 0.6), 0 0 60px rgba(0, 191, 255, 0.8);
+  animation: shimmer 3s infinite alternate, flicker 1.5s infinite alternate;
+}
+
+/* Shimmering effect */
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Flickering neon glow */
+@keyframes flicker {
+  0% { opacity: 0.9; text-shadow: 0 0 20px #ff66ff, 0 0 30px #ffccff; }
+  50% { opacity: 1; text-shadow: 0 0 
+
+      }}

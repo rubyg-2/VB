@@ -11,7 +11,10 @@
     <!-- Preloader with local video -->
     <div id="preloader">
         <div id="video-container">
-            <video id="loader-video" width="100%" height="100%" autoplay>
+          <!--  <video id="loader-video" width="100%" height="100%" autoplay>-->
+            <!--update with below to have the autoplay but now it has to be muted due to the browser features-->
+            <video id="loader-video" width="100%" height="100%" autoplay muted playsinline>
+
                 <source src="assets/intro-video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>

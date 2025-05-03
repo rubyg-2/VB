@@ -46,15 +46,15 @@
   margin: 1rem auto;  /* Center image and give it some space */
 }
 
-
 .timeline-iframe {
-  max-width: 400px;
-  height: auto;
-  aspect-ratio: 960 / 569; /* Maintain original slide ratio */
+  max-width: 600px;  /* Adjust the maximum width */
+  width: 100%;       /* Make it responsive */
+  height: 350px;     /* Set a smaller height */
+  aspect-ratio: 16 / 9;  /* Ensure it maintains a nice aspect ratio */
   border-radius: 8px;
   display: block;
   margin: 1rem auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Optional: for consistency and polish */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Optional: for styling */
 }
 
 

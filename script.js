@@ -87,13 +87,12 @@ video.addEventListener('ended', function() {
 });
 
 
-
+/*
 function toggleDetails(button) {
-  var details = button.nextElementSibling;
-  details.classList.toggle('hidden');
-  btn.textContent = details.classList.contains('hidden') ? 'Read More' : 'Hide';
-}
-
+    const details = button.nextElementSibling;
+    details.classList.toggle("hidden");
+    button.textContent = details.classList.contains("hidden") ? "Read More" : "Read Less";
+  }
 /*
 let currentIndex = 0;
 
@@ -109,34 +108,23 @@ let currentIndex = 0;
 
     slider.style.transform = `translateX(-${currentIndex * containerWidth}px)`;
   }
-*/
+
 // Function to move the slider images
-function slide(direction, sliderContainer) {
-    const slider = sliderContainer.querySelector('.slider'); // Get the slider container
-    const images = slider.querySelectorAll('img'); // Get all the images inside the slider
-    let currentIndex = -1;
+ function slide(direction, sliderId) {
+    const slider = document.getElementById(sliderId);
+    const images = slider.querySelectorAll('img');
+    const imageWidth = images[0].clientWidth;
+    const currentTransform = slider.style.transform || "translateX(0px)";
+    const currentX = parseInt(currentTransform.match(/-?\d+/)[0]);
 
-    // Find the current visible image (this is the first image with the "visible" class)
-    images.forEach((image, index) => {
-        if (image.classList.contains('visible')) {
-            currentIndex = index;
-        }
-    });
+    let maxX = -(imageWidth * (images.length - 1));
+    let newX = currentX + direction * imageWidth;
 
-    // Remove the "visible" class from the current image
-    if (currentIndex !== -1) {
-        images[currentIndex].classList.remove('visible');
-    }
+    if (newX > 0) newX = 0;
+    if (newX < maxX) newX = maxX;
 
-    // Calculate the new index based on the direction (-1 for left, 1 for right)
-    let newIndex = (currentIndex + direction + images.length) % images.length;
-
-    // Add the "visible" class to the new image
-    images[newIndex].classList.add('visible');
-
-    // Adjust the slider's position by updating the transform property
-    slider.style.transform = `translateX(-${newIndex * 100}%)`;
-}
+    slider.style.transform = `translateX(${newX}px)`;
+  }
 
 // Set the first image as visible initially when the page loads
 window.onload = () => {
@@ -159,4 +147,31 @@ window.onload = () => {
             rightArrow.addEventListener('click', () => slide(1, sliderContainer)); // Move right
         }
     });
-};
+};*/
+
+
+function toggleDetails(button) {
+  const details = button.nextElementSibling;
+  details.classList.toggle("hidden");
+  button.textContent = details.classList.contains("hidden") ? "Read More" : "Read Less";
+}
+
+// Slide images left (-1) or right (1)
+function slide(direction, sliderId) {
+  const slider = document.getElementById(sliderId);
+  const images = slider.querySelectorAll('img');
+  const imageWidth = images[0].clientWidth;
+
+  // Get current transform position
+  const currentTransform = slider.style.transform || "translateX(0px)";
+  const currentX = parseInt(currentTransform.match(/-?\d+/)?.[0] || "0");
+
+  const maxX = -(imageWidth * (images.length - 1));
+  let newX = currentX + direction * imageWidth;
+
+  // Clamp to bounds
+  if (newX > 0) newX = 0;
+  if (newX < maxX) newX = maxX;
+
+  slider.style.transform = `translateX(${newX}px)`;
+}

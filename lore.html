@@ -103,6 +103,7 @@
 <section class="timeline">
   <div class="timeline-event" data-type="Diary">
     <div class="timeline-dot"></div>
+      <div class="timeline-line"></div>
     <div class="timeline-content">
  <h3>   ✦ ✧ ✦ Caelum ⋆ Asterum ⋆ Terra ✦ ✧ ✦ </h3>      
     <span class="date">January 12, 2022</span>
@@ -113,12 +114,10 @@
         and a meteor is released, falling onto Caelum, where the character comes 
         to life in a Virtual World. If or when a character who is living in Caleum 
         loses their popularity, they disappear and return to the form of a cube and 
-        then reside back in Asterum. [Revealed in Eunho's Birthday Kit QR code] 
+        then reside back in Asterum. [Revealed in Eunho's Birthday Kit QR code] </p>
         <img src="LoreImages/cat.png" alt="Caelum, Asterum, Terra">
 
-      </p>
-    </div>
-  </div>
+      </div>
 </div>
       <!-- Repeat for more events -->
 
@@ -136,7 +135,6 @@
         a diary entry where the members of Plave's are revealed to be originally from 3 different
         webtoons that were discontinued, meaning they're on limited time before returning to their 
         cube for.
-
 </p>
       <button onclick="toggleDetails(this)">Read More</button>
       <div class="details hidden">
@@ -148,7 +146,7 @@
        <img src="LoreImages/castle.png" alt="castel">
         <img src ="LoreImages/cyber.png" alt = "cyber">
         </div>
-    <button class="arrow right" onclick="slide(1)">&#10095;</button>
+    <button class="arrow right" onclick="slide(1, 'imageSlider1')">&#10095;</button>
   </div>
         <p>Hamin was never publicly introduced as he was an upcoming character for the unknown authors new martial
         webtoon. He remianed in cube form in Asterum. But his sudden appearance in the MV is unexplainable, as we can see
@@ -166,7 +164,7 @@
   <div class="timeline-event" data-type="mv">
     <div class="timeline-dot"></div>
     <div class="timeline-content">
- <h3> Hamin and Developer A  </h3>      
+ <h3> Hamin and Developer A </h3>      
     <span class="date">  March 11, 2023</span>
       <p>Hamin's goal is to collect Star Shards(meteor debris), and with the help from Developer A (a former webtoon artist
         now programmer), help rescue the other members and gather them to Asterum through a rift, preventing their deletion and in hopes of 
@@ -181,11 +179,11 @@
        <img src="LoreImages/nhello.png" alt = "noah hello message">
        <img src="LoreImages/bhello.png" alt = "bamny hello message">
        <img src="LoreImages/nhello.png" alt = "noah hello message">
-      <img src= "LoreImahes/develpera.png" alt = "developer A">
+      <img src= "LoreImages/develpera.png" alt = "developer A">
        <img src="LoreImages/rift.png" alt = "rift opening">
 
            </div>
-    <button class="arrow right" onclick="slide(1)">&#10095;</button>
+    <button class="arrow right" onclick="slide(1, 'imageSlider2')">&#10095;</button>
   </div>
         <p> Asterum, which was previously a lifeless place, is now revitalized and shining bright.
           PLAVE is now able to interact with and connect with their fans (PLLI's) from Terra through
@@ -226,10 +224,10 @@
 
       <img src="LoreImages/LMS.jpg" alt = "LMS website image">
        <img src="LoreImages/6track.jpg" alt = "previous webtoons found">
-     <img src = "LoreImages/poster6" alt= "the poster in the mv background">
+     <img src = "LoreImages/poster6.jpg" alt= "the poster in the mv background">
 
            </div>
-    <button class="arrow right" onclick="slide(1)">&#10095;</button>
+    <button class="arrow right" onclick="slide(1, 'imageSlider3')">&#10095;</button>
   </div>
       
       
@@ -254,7 +252,7 @@
        <img src ="LoreImages/marigold.png" alt = "marigold flowers appear">
         <img src ="LoreImages/plavem.png" alt = "plave in marigold field">
         </div>
-    <button class="arrow right" onclick="slide(1)">&#10095;</button>
+    <button class="arrow right" onclick="slide(1, 'imageSlider4')">&#10095;</button>
   </div>
       
   </div>
@@ -275,7 +273,6 @@
         star shards, symbolic of PLLI’s love. According to a live stream by Noah, these meteors actually help the trees grow, which explains why much
         of the MV is set in a forest. During the video, Noah presents a small cube—visually similar to the core cube Hamin used to gather the members
         in “Wait for You”—which transforms into a glowing pink heart. This heart, representing PLLI’s love, becomes the guide for their journey.
-
 </p>
       <button onclick="toggleDetails(this)">Read More</button>
       <div class="details hidden">
@@ -287,22 +284,17 @@
 
         <img src ="LoreImages/heart.png" alt = "PLLI's love">
         <img src ="LoreImages/forest.png" alt = "PLAVE in the forest">
-      
         </div>
-    <button class="arrow right" onclick="slide(1)">&#10095;</button>
+    <button class="arrow right" onclick="slide(1, 'imageSlider5')">&#10095;</button>
   </div>
         <p> The final shot reveals five mysterious figures in black hoods—who are later identified as Caligo. Caligo was officially introduced through
           a QR code hidden in Yejun’s birthday kit. It was revealed that Caelum is more than just a planet—it has a will of its own. Caelum resurrects 
           certain characters who have disappeared and turns them into soldiers of its army, known as Caligo. These resurrected beings serve only Caelum’s 
           will, with the mission of capturing or containing characters who go out of bounds. This twist introduced a darker, opposing force into PLAVE’s universe.
-
 </p>
        
         <img src="LoreImages/caligo.png" alt = "Ending MV shot">
-      
-      
-     
-      
+ 
   </div>
 </div>
         </div>
@@ -334,7 +326,7 @@
 
 
         </div>
-    <button class="arrow right" onclick="slide(1)">&#10095;</button>
+    <button class="arrow right" onclick="slide(1, 'imageSlider6')">&#10095;</button>
       </div>
     </div>
   
@@ -364,7 +356,7 @@
        <img src="LoreImages/special.png" alt = "colors island">
       
         </div>
-    <button class="arrow right" onclick="slide(1)">&#10095;</button>
+    <button class="arrow right" onclick="slide(1, 'imageSlider7')">&#10095;</button>
   </div>
     
      </div>
@@ -475,7 +467,7 @@
 
       
         </div>
-    <button class="arrow right" onclick="slide(1)">&#10095;</button>
+    <button class="arrow right" onclick="slide(1, 'imageSlider8')">&#10095;</button>
   </div>
        
      

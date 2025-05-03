@@ -158,18 +158,21 @@ function toggleDetails(button) {
 
 // Slide images left (-1) or right (1)
 function slide(direction, sliderId) {
-  const slider = document.getElementById(sliderId);
+  const sliderContainer = document.getElementById(sliderId);
+  if (!sliderContainer) return console.error(`No element with id ${sliderId}`);
+
+  const slider = sliderContainer.querySelector('.slider');
+  if (!slider) return console.error(`No .slider inside #${sliderId}`);
+
   const images = slider.querySelectorAll('img');
   const imageWidth = images[0].clientWidth;
 
-  // Get current transform position
   const currentTransform = slider.style.transform || "translateX(0px)";
   const currentX = parseInt(currentTransform.match(/-?\d+/)?.[0] || "0");
 
   const maxX = -(imageWidth * (images.length - 1));
   let newX = currentX + direction * imageWidth;
 
-  // Clamp to bounds
   if (newX > 0) newX = 0;
   if (newX < maxX) newX = maxX;
 

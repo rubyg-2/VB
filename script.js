@@ -88,8 +88,8 @@ video.addEventListener('ended', function() {
 
 
 
-function toggleDetails(btn) {
-  const details = btn.nextElementSibling;
+function toggleDetails(button) {
+  var details = button.nextElementSibling;
   details.classList.toggle('hidden');
   btn.textContent = details.classList.contains('hidden') ? 'Read More' : 'Hide';
 }
@@ -111,6 +111,8 @@ let currentIndex = 0;
   }
 */
 
+
+// Function to move the slider images
 function slide(direction) {
     const slider = event.target.closest('.slider'); // Get the slider container
     const images = slider.querySelectorAll('img'); // Get all the images inside the slider
@@ -142,6 +144,18 @@ window.onload = () => {
         const images = slider.querySelectorAll('img');
         if (images.length > 0) {
             images[0].classList.add('visible');
+        }
+
+        // Add event listeners to the arrow buttons
+        const leftArrow = slider.querySelector('.left-arrow');
+        const rightArrow = slider.querySelector('.right-arrow');
+
+        if (leftArrow) {
+            leftArrow.addEventListener('click', () => slide(-1)); // Move left
+        }
+
+        if (rightArrow) {
+            rightArrow.addEventListener('click', () => slide(1)); // Move right
         }
     });
 };

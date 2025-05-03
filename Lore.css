@@ -47,15 +47,15 @@
 }
 
 .timeline-iframe {
-  max-width: 100%;           /* Let it fill the container */
-  width: 100%;               /* Responsive width */
-  height: auto;              /* Let aspect-ratio set the height */
-  aspect-ratio: 16 / 9;      /* Maintain a widescreen aspect */
-  border-radius: 12px;       /* Slightly more rounded for consistency */
+  width: 100%;
+  max-width: none;            /* Remove any max-width restriction */
+  height: 500px;              /* Larger fixed height */
+  border-radius: 12px;
   display: block;
-  margin: 1.5rem auto;       /* A bit more breathing space */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); /* Stronger shadow for depth */
+  margin: 2rem auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
+
 
 
 

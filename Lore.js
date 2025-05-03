@@ -21,4 +21,16 @@ let currentIndex = 0;
     slider.style.transform = `translateX(-${currentIndex * containerWidth}px)`;
   }*/
 
+window.slide = function (button, direction) {
+  const slider = button.closest('.slider-container').querySelector('.slider');
+  const slides = slider.querySelectorAll('.slide');
+  let currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+
+  if (currentIndex === -1) currentIndex = 0; // Fallback safety
+
+  slides[currentIndex].classList.remove('active');
+  currentIndex = (currentIndex + direction + slides.length) % slides.length;
+  slides[currentIndex].classList.add('active');
+};
+
 

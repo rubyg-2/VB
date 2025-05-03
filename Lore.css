@@ -115,3 +115,16 @@ a:hover {
 .details.hidden {
   display: none;
 }
+
+
+.embedded-slides {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;  /* Keeps a standard presentation aspect ratio */
+  border-radius: 8px;
+  display: block;
+  margin: 1rem auto;
+  border: none;
+}
+

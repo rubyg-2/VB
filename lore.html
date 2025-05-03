@@ -199,16 +199,22 @@
     </div>
   </div>
 </div>
-    <script>
-  let currentIndex = 0;
-  const slides = document.querySelectorAll('.slide');
+   <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
 
-  function slide(direction) {
-    slides[currentIndex].classList.remove('active');
-    currentIndex = (currentIndex + direction + slides.length) % slides.length;
-    slides[currentIndex].classList.add('active');
-  }
+    function slide(direction) {
+      slides[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + direction + slides.length) % slides.length;
+      slides[currentIndex].classList.add('active');
+    }
+
+    // Make slide function global so it's accessible from HTML onclick
+    window.slide = slide;
+  });
 </script>
+
 
     
     

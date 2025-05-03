@@ -208,19 +208,31 @@
 
  <script>
   document.addEventListener("DOMContentLoaded", function () {
-    let currentIndex = 0;
-    const slides = document.querySelectorAll('.slide');
+    // Toggle "Read More" hidden content
+    window.toggleDetails = function (button) {
+      const details = button.nextElementSibling;
+      if (details.classList.contains("hidden")) {
+        details.classList.remove("hidden");
+        button.textContent = "Read Less";
+      } else {
+        details.classList.add("hidden");
+        button.textContent = "Read More";
+      }
+    };
 
-    function slide(direction) {
+    // Image slider logic scoped per slider-container
+    window.slide = function (button, direction) {
+      const slider = button.closest('.slider-container').querySelector('.slider');
+      const slides = slider.querySelectorAll('.slide');
+      let currentIndex = Array.from(slides).findIndex(s => s.classList.contains('active'));
+
       slides[currentIndex].classList.remove('active');
       currentIndex = (currentIndex + direction + slides.length) % slides.length;
       slides[currentIndex].classList.add('active');
-    }
-
-    // Make slide function global so it's accessible from HTML onclick
-    window.slide = slide;
+    };
   });
 </script>
+
 
     
     <script src = "script.js"></script>

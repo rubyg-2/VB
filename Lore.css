@@ -47,10 +47,9 @@
 }
 
 .timeline-iframe {
-  max-width: 100%;
+  max-width: none;
   width: 100%;
   height: auto;
-  aspect-ratio: 960 / 569; /* Maintain original slide ratio */
   border-radius: 8px;
   display: block;
   margin: 1rem auto;

@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="style.css">
      <link rel="stylesheet" href="Lore.css" />
     <script src = "Lore.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+
         <link rel="stylesheet" href="style.css">
     
 </head>
@@ -190,6 +195,16 @@
 
 
 
+          <div class="glider-contain">
+  <div class="glider">
+    <img src="LoreImages/lab.png" alt="lab">
+    <img src="LoreImages/castle.png" alt="castle">
+    <img src="LoreImages/cyber.png" alt="cyber">
+  </div>
+  <button class="glider-prev">«</button>
+  <button class="glider-next">»</button>
+</div>
+
           
         <p>Hamin was never publicly introduced as he was an upcoming character for the unknown authors new martial
         webtoon. He remianed in cube form in Asterum. But his sudden appearance in the MV is unexplainable, as we can see
@@ -236,7 +251,19 @@
 </script>
 
 
-    
+<script>
+  new Glider(document.querySelector('.glider'), {
+    slidesToShow: 1,
+    draggable: true,
+    dots: false,
+    arrows: {
+      prev: '.glider-prev',
+      next: '.glider-next'
+    }
+  });
+</script>
+
+         
     <script src = "script.js"></script>
 </body>
 </html>

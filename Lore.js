@@ -5,7 +5,7 @@ function toggleDetails(btn) {
   btn.textContent = details.classList.contains('hidden') ? 'Read More' : 'Hide';
 }
 
-
+/*
 let currentIndex = 0;
 
   function slide(direction) {
@@ -19,4 +19,6 @@ let currentIndex = 0;
     if (currentIndex >= totalImages) currentIndex = 0;
 
     slider.style.transform = `translateX(-${currentIndex * containerWidth}px)`;
-  }
+  }*/
+
+

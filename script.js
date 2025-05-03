@@ -200,3 +200,7 @@ window.onload = () => {
         }
     });
 };
+
+iframe {
+    border: none;
+}

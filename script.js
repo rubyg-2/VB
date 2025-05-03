@@ -159,31 +159,24 @@ function toggleDetails(button) {
 
 // Function to move the slider images
 function slide(direction, sliderContainer) {
-    const slider = sliderContainer.querySelector('.slider'); // Get the slider container
-    const images = slider.querySelectorAll('img'); // Get all the images inside the slider
-    let currentIndex = -1;
+  const slider = sliderContainer.querySelector('.slider');
+  if (!slider) return console.error(`No .slider inside`, sliderContainer);
 
-    // Find the current visible image (this is the first image with the "visible" class)
-    images.forEach((image, index) => {
-        if (image.classList.contains('visible')) {
-            currentIndex = index;
-        }
-    });
+  const images = slider.querySelectorAll('img');
+  const imageWidth = images[0]?.clientWidth || 0;
 
-    // Remove the "visible" class from the current image
-    if (currentIndex !== -1) {
-        images[currentIndex].classList.remove('visible');
-    }
+  const currentTransform = slider.style.transform || "translateX(0px)";
+  const currentX = parseInt(currentTransform.match(/-?\d+/)?.[0] || "0");
 
-    // Calculate the new index based on the direction (-1 for left, 1 for right)
-    let newIndex = (currentIndex + direction + images.length) % images.length;
+  const maxX = -(imageWidth * (images.length - 1));
+  let newX = currentX + direction * imageWidth;
 
-    // Add the "visible" class to the new image
-    images[newIndex].classList.add('visible');
+  if (newX > 0) newX = 0;
+  if (newX < maxX) newX = maxX;
 
-    // Adjust the slider's position by updating the transform property
-    slider.style.transform = `translateX(-${newIndex * 100}%)`;
+  slider.style.transform = `translateX(${newX}px)`;
 }
+
 
 // Set the first image as visible initially when the page loads
 window.onload = () => {

@@ -110,11 +110,9 @@ let currentIndex = 0;
     slider.style.transform = `translateX(-${currentIndex * containerWidth}px)`;
   }
 */
-
-
 // Function to move the slider images
-function slide(direction) {
-    const slider = event.target.closest('.slider'); // Get the slider container
+function slide(direction, sliderContainer) {
+    const slider = sliderContainer.querySelector('.slider'); // Get the slider container
     const images = slider.querySelectorAll('img'); // Get all the images inside the slider
     let currentIndex = -1;
 
@@ -135,27 +133,30 @@ function slide(direction) {
 
     // Add the "visible" class to the new image
     images[newIndex].classList.add('visible');
+
+    // Adjust the slider's position by updating the transform property
+    slider.style.transform = `translateX(-${newIndex * 100}%)`;
 }
 
 // Set the first image as visible initially when the page loads
 window.onload = () => {
-    const sliders = document.querySelectorAll('.slider');
-    sliders.forEach(slider => {
-        const images = slider.querySelectorAll('img');
+    const sliders = document.querySelectorAll('.slider-container');
+    sliders.forEach(sliderContainer => {
+        const images = sliderContainer.querySelectorAll('.slider img');
         if (images.length > 0) {
             images[0].classList.add('visible');
         }
 
         // Add event listeners to the arrow buttons
-        const leftArrow = slider.querySelector('.left-arrow');
-        const rightArrow = slider.querySelector('.right-arrow');
+        const leftArrow = sliderContainer.querySelector('.arrow.left');
+        const rightArrow = sliderContainer.querySelector('.arrow.right');
 
         if (leftArrow) {
-            leftArrow.addEventListener('click', () => slide(-1)); // Move left
+            leftArrow.addEventListener('click', () => slide(-1, sliderContainer)); // Move left
         }
 
         if (rightArrow) {
-            rightArrow.addEventListener('click', () => slide(1)); // Move right
+            rightArrow.addEventListener('click', () => slide(1, sliderContainer)); // Move right
         }
     });
 };

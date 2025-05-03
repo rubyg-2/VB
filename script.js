@@ -94,7 +94,7 @@ function toggleDetails(btn) {
   btn.textContent = details.classList.contains('hidden') ? 'Read More' : 'Hide';
 }
 
-
+/*
 let currentIndex = 0;
 
   function slide(direction) {
@@ -109,4 +109,39 @@ let currentIndex = 0;
 
     slider.style.transform = `translateX(-${currentIndex * containerWidth}px)`;
   }
+*/
 
+function slide(direction) {
+    const slider = event.target.closest('.slider'); // Get the slider container
+    const images = slider.querySelectorAll('img'); // Get all the images inside the slider
+    let currentIndex = -1;
+
+    // Find the current visible image (this is the first image with the "visible" class)
+    images.forEach((image, index) => {
+        if (image.classList.contains('visible')) {
+            currentIndex = index;
+        }
+    });
+
+    // Remove the "visible" class from the current image
+    if (currentIndex !== -1) {
+        images[currentIndex].classList.remove('visible');
+    }
+
+    // Calculate the new index based on the direction (-1 for left, 1 for right)
+    let newIndex = (currentIndex + direction + images.length) % images.length;
+
+    // Add the "visible" class to the new image
+    images[newIndex].classList.add('visible');
+}
+
+// Set the first image as visible initially when the page loads
+window.onload = () => {
+    const sliders = document.querySelectorAll('.slider');
+    sliders.forEach(slider => {
+        const images = slider.querySelectorAll('img');
+        if (images.length > 0) {
+            images[0].classList.add('visible');
+        }
+    });
+};

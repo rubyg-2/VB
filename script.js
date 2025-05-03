@@ -87,13 +87,14 @@ video.addEventListener('ended', function() {
 });
 
 
-/*
-function toggleDetails(button) {
-    const details = button.nextElementSibling;
-    details.classList.toggle("hidden");
-    button.textContent = details.classList.contains("hidden") ? "Read More" : "Read Less";
-  }
-/*
+
+function toggleDetails(btn) {
+  const details = btn.nextElementSibling;
+  details.classList.toggle('hidden');
+  btn.textContent = details.classList.contains('hidden') ? 'Read More' : 'Hide';
+}
+
+
 let currentIndex = 0;
 
   function slide(direction) {
@@ -108,133 +109,3 @@ let currentIndex = 0;
 
     slider.style.transform = `translateX(-${currentIndex * containerWidth}px)`;
   }
-
-// Function to move the slider images
- function slide(direction, sliderId) {
-    const slider = document.getElementById(sliderId);
-    const images = slider.querySelectorAll('img');
-    const imageWidth = images[0].clientWidth;
-    const currentTransform = slider.style.transform || "translateX(0px)";
-    const currentX = parseInt(currentTransform.match(/-?\d+/)[0]);
-
-    let maxX = -(imageWidth * (images.length - 1));
-    let newX = currentX + direction * imageWidth;
-
-    if (newX > 0) newX = 0;
-    if (newX < maxX) newX = maxX;
-
-    slider.style.transform = `translateX(${newX}px)`;
-  }
-
-// Set the first image as visible initially when the page loads
-window.onload = () => {
-    const sliders = document.querySelectorAll('.slider-container');
-    sliders.forEach(sliderContainer => {
-        const images = sliderContainer.querySelectorAll('.slider img');
-        if (images.length > 0) {
-            images[0].classList.add('visible');
-        }
-
-        // Add event listeners to the arrow buttons
-        const leftArrow = sliderContainer.querySelector('.arrow.left');
-        const rightArrow = sliderContainer.querySelector('.arrow.right');
-
-        if (leftArrow) {
-            leftArrow.addEventListener('click', () => slide(-1, sliderContainer)); // Move left
-        }
-
-        if (rightArrow) {
-            rightArrow.addEventListener('click', () => slide(1, sliderContainer)); // Move right
-        }
-    });
-};*/
-
-
-
-function toggleDetails(button) {
-    var details = button.nextElementSibling;
-    details.classList.toggle('hidden');
-    button.textContent = details.classList.contains('hidden') ? 'Read More' : 'Hide';
-}
-
-// Function to move the slider images
-function slide(direction, sliderContainer) {
-  const slider = sliderContainer.querySelector('.slider');
-  if (!slider) return console.error(`No .slider inside`, sliderContainer);
-
-  const images = slider.querySelectorAll('img');
-  const imageWidth = images[0]?.clientWidth || 0;
-
-  const currentTransform = slider.style.transform || "translateX(0px)";
-  const currentX = parseInt(currentTransform.match(/-?\d+/)?.[0] || "0");
-
-  const maxX = -(imageWidth * (images.length - 1));
-  let newX = currentX + direction * imageWidth;
-
-  if (newX > 0) newX = 0;
-  if (newX < maxX) newX = maxX;
-
-  slider.style.transform = `translateX(${newX}px)`;
-}
-
-
-// Set the first image as visible initially when the page loads
-window.onload = () => {
-    const sliders = document.querySelectorAll('.slider-container');
-    sliders.forEach(sliderContainer => {
-        const images = sliderContainer.querySelectorAll('.slider img');
-        if (images.length > 0) {
-            images[0].classList.add('visible');
-        }
-
-        // Add event listeners to the arrow buttons
-        const leftArrow = sliderContainer.querySelector('.arrow.left');
-        const rightArrow = sliderContainer.querySelector('.arrow.right');
-
-        if (leftArrow) {
-            leftArrow.addEventListener('click', () => slide(-1, sliderContainer)); // Move left
-        }
-
-        if (rightArrow) {
-            rightArrow.addEventListener('click', () => slide(1, sliderContainer)); // Move right
-        }
-    });
-};
-
-.custom-slideshow {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  margin: 20px auto;
-}
-
-.slide {
-  display: none;
-  width: 100%;
-  border-radius: 10px;
-}
-
-.slide.active {
-  display: block;
-}
-
-.custom-slideshow button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.4);
-  border: none;
-  color: white;
-  padding: 8px;
-  cursor: pointer;
-  font-size: 20px;
-  z-index: 10;
-  border-radius: 50%;
-}
-
-.prev {
-  left: 10px;
-}
-.next {
-  right: 10px;
-}

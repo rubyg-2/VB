@@ -1,0 +1,116 @@
+.timeline {
+  position: relative;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 800px;
+  padding-left: 30px;
+  border-left: 3px solid #bbb;
+}
+
+.timeline-event {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -9px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(135deg, #6e9ffb, #b77eff);
+  border-radius: 50%;
+  box-shadow: 0 0 10px #b77eff;
+}
+
+.timeline-content {
+  background: #1e1e2f;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #444;
+}
+
+.timeline-content .date {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+
+
+.timeline-content img {
+  max-width: 400px;    /* Prevents image from exceeding container width */
+  height: auto;       /* Maintains aspect ratio */
+  border-radius: 8px; /* Optional: rounded corners for aesthetics */
+  display: block;
+  margin: 1rem auto;  /* Center image and give it some space */
+}
+
+
+ .slider-container {
+    position: relative;
+    max-width: 400px; /* adjust as needed */
+    overflow: hidden;
+    margin: auto;
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .slider img {
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0.7;
+  }
+
+  .arrow.left {
+    left: 5px;
+  }
+
+  .arrow.right {
+    right: 5px;
+  }
+
+
+
+a {
+  text-decoration: none; /* Remove underline */
+  color: #90D5FF; /* Change link color */
+}
+
+a:hover {
+  color: red; /* Change color on hover */
+}
+
+
+
+/*
+
+.image-row {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.image-row img {
+  width: 30%;
+  border-radius: 6px;
+}
+*/
+
+.details.hidden {
+  display: none;
+}

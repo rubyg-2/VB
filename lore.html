@@ -194,13 +194,22 @@
         him, thus he has broken out of his cube somehow.</p>
         <img src = "LoreImages/hamincube.png" alt = "hamin escaped his cube and is out in Asterum" >
       </div>
-      
      
       
     </div>
   </div>
 </div>
-    
+    <script>
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function slide(direction) {
+    slides[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + direction + slides.length) % slides.length;
+    slides[currentIndex].classList.add('active');
+  }
+</script>
+
     
     
       <!---->

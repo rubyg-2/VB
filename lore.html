@@ -82,10 +82,7 @@
 
     <head>
         <link rel="stylesheet" href="style.css">
-        <h1>
-            TO BEGIN...
-        </h1>
-
+        <h1>TO BEGIN...</h1>
     </head>
 <!--ADD THIS TIMELINE PLAVE LORE ->
 
@@ -137,12 +134,16 @@
 </p>
       <button onclick="toggleDetails(this)">Read More</button>
       <div class="details hidden">
+
+          <div class = "custom-slideshow">
+              <img src="LoreImages/lab.png" class="slide active" alt = "lab">
+              <img src="LoreImages/castle.png" class="slide active" alt = "castle">
+              <img src="LoreImages/cyber.png" class="slide active" alt = "cyber">
+ <button class="prev" onclick="changeSlide(-1)">❮</button>
+  <button class="next" onclick="changeSlide(1)">❯</button>
+</div>
+
           
-       <iframe src="https://docs.google.com/presentation/d/1rxf2yjPZN0JZ0AOA-SVoCQm9OFY4odIjYl-5jL1FoNk/edit?usp=sharing"
-        width="600" height="400" frameborder="0" 
-        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" 
-        style="border: none;">
-</iframe>
   </div>
         <p>Hamin was never publicly introduced as he was an upcoming character for the unknown authors new martial
         webtoon. He remianed in cube form in Asterum. But his sudden appearance in the MV is unexplainable, as we can see
@@ -151,7 +152,17 @@
       </div>     
     </div>
     
-    
+ <script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function changeSlide(direction) {
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide + direction + slides.length) % slides.length;
+  slides[currentSlide].classList.add('active');
+}
+</script>
+   
     
       <!---->
     

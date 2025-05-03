@@ -46,6 +46,20 @@
   margin: 1rem auto;  /* Center image and give it some space */
 }
 
+
+.timeline-iframe {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 960 / 569; /* Maintain original slide ratio */
+  border-radius: 8px;
+  display: block;
+  margin: 1rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Optional: for consistency and polish */
+}
+
+
+
 /*
  .slider-container {
     position: relative;

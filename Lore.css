@@ -46,16 +46,6 @@
   margin: 1rem auto;  /* Center image and give it some space */
 }
 
-.timeline-iframe {
-  max-width: none;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block;
-  margin: 1rem auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Optional: for consistency and polish */
-}
-
 
 
 

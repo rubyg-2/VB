@@ -144,9 +144,7 @@
   <div class="timeline-event" data-type="mv">
     <div class="timeline-dot"></div>
     <div class="timeline-content">
- <h3>
-        Lost Origins
-        </h3>      
+ <h3> Lost Origins </h3>      
     <span class="date"> March 11, 2023</span>
       <p>In the <a href="https://www.youtube.com/watch?v=cFm8fTRW_so&ab_channel=PLAVE%ED%94%8C%EB%A0%88%EC%9D%B4%EB%B8%8C"> "Wait for You" </a>MV, we see Yejun living in a place that looks like a 
         Laboratory, Noah residing in a Magical Kingdom, and Bamby and Eunho seen in a 
@@ -154,7 +152,6 @@
         a diary entry where the members of Plave's are revealed to be originally from 3 different
         webtoons that were discontinued, meaning they're on limited time before returning to their 
         cube for.
-
 </p>
       <button onclick="toggleDetails(this)">Read More</button>
       <div class="details hidden">
@@ -191,45 +188,6 @@
   
 <!--PLAVE LORE ABOVE-->
 
- <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Toggle "Read More" hidden content
-    window.toggleDetails = function (button) {
-      const details = button.nextElementSibling;
-      if (details.classList.contains("hidden")) {
-        details.classList.remove("hidden");
-        button.textContent = "Read Less";
-      } else {
-        details.classList.add("hidden");
-        button.textContent = "Read More";
-      }
-    };
-
-    // Image slider logic scoped per slider-container
-    window.slide = function (button, direction) {
-      const slider = button.closest('.slider-container').querySelector('.slider');
-      const slides = slider.querySelectorAll('.slide');
-      let currentIndex = Array.from(slides).findIndex(s => s.classList.contains('active'));
-
-      slides[currentIndex].classList.remove('active');
-      currentIndex = (currentIndex + direction + slides.length) % slides.length;
-      slides[currentIndex].classList.add('active');
-    };
-  });
-</script>
-
-
-<script>
-  new Glider(document.querySelector('.glider'), {
-    slidesToShow: 1,
-    draggable: true,
-    dots: false,
-    arrows: {
-      prev: '.glider-prev',
-      next: '.glider-next'
-    }
-  });
-</script>
 
          
     <script src = "script.js"></script>

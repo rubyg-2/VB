@@ -300,4 +300,16 @@ nav ul li a:hover {
 .modal-content button:hover {
     background-color: #f06292;
 }
+/*ADDING TO GET BACKGROUND*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #2b1055, #7597de); /* example gradient */
+    /* OR for an image: */
+    /* background: url('your-background-image.jpg') no-repeat center center fixed;
+    background-size: cover; */
+    font-family: 'Poppins', sans-serif; /* Optional: nice clean font */
+    color: #fff; /* Make text white if using a dark background */
+}
 

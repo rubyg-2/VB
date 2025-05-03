@@ -46,10 +46,10 @@
   margin: 1rem auto;  /* Center image and give it some space */
 }
 
-
+/*
  .slider-container {
     position: relative;
-    max-width: 400px; /* adjust as needed */
+    max-width: 400px; /* adjust as needed 
     overflow: hidden;
     margin: auto;
   }
@@ -84,7 +84,7 @@
   .arrow.right {
     right: 5px;
   }
-
+*/.
 
 
 a {
@@ -116,15 +116,59 @@ a:hover {
   display: none;
 }
 
-
+/*
 .embedded-slides {
   max-width: 400px;
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;  /* Keeps a standard presentation aspect ratio */
+  aspect-ratio: 16 / 9;  /* Keeps a standard presentation aspect ratio 
   border-radius: 8px;
   display: block;
   margin: 1rem auto;
   border: none;
+}*/
+
+.slider-container {
+  position: relative;
+  max-width: 400px;
+  margin: 1rem auto;
+  overflow: hidden;
 }
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: auto;
+  display: none;
+  border-radius: 8px;
+}
+
+.slide.active {
+  display: block;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  z-index: 1;
+}
+
+.arrow.left {
+  left: 0;
+}
+
+.arrow.right {
+  right: 0;
+}
+
 

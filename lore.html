@@ -80,7 +80,7 @@
 
     </section>
 
-    <head>
+    <
         <link rel="stylesheet" href="style.css">
         <h1>
             TO BEGIN...
@@ -94,7 +94,6 @@
     <p>  Caelum is the world in which the members—Bamby, Noah, Yejun, Eunho—live. 
     It's a virtual world powered by the creators from Terra (Earth), allowing 
     the members of Plave to enter the realm of Asterum and interact with the real world. </p>
-    </head>
 <!--ADD THIS TIMELINE PLAVE LORE ->
 
     <!-- The website stylesheet -->
@@ -177,14 +176,15 @@
 </div>
 -->
           <div class="slider-container">
-  <button class="arrow left" onclick="slide(-1)">&#10094;</button>
-  <div class="slider" id="imageSlider">
-    <img src="LoreImages/lab.png" alt="lab" class="slide active">
-    <img src="LoreImages/castle.png" alt="castle" class="slide">
-    <img src="LoreImages/cyber.png" alt="cyber" class="slide">
-  </div>
-  <button class="arrow right" onclick="slide(1)">&#10095;</button>
-</div>
+        <button class="arrow left" onclick="slide(this, -1)">&#10094;</button>
+        <div class="slider">
+          <img src="LoreImages/lab.png" alt="lab" class="slide active">
+          <img src="LoreImages/castle.png" alt="castle" class="slide">
+          <img src="LoreImages/cyber.png" alt="cyber" class="slide">
+        </div>
+        <button class="arrow right" onclick="slide(this, 1)">&#10095;</button>
+      </div>
+
 
 
 
@@ -193,13 +193,20 @@
         webtoon. He remianed in cube form in Asterum. But his sudden appearance in the MV is unexplainable, as we can see
         him, thus he has broken out of his cube somehow.</p>
         <img src = "LoreImages/hamincube.png" alt = "hamin escaped his cube and is out in Asterum" >
-      </div>
-     
+    
       
     </div>
   </div>
 </div>
-   <script>
+  
+
+
+    
+    
+  
+<!--PLAVE LORE ABOVE-->
+
+ <script>
   document.addEventListener("DOMContentLoaded", function () {
     let currentIndex = 0;
     const slides = document.querySelectorAll('.slide');
@@ -214,14 +221,6 @@
     window.slide = slide;
   });
 </script>
-
-
-    
-    
-  
-<!--PLAVE LORE ABOVE-->
-
-
 
     
     <script src = "script.js"></script>

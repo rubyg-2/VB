@@ -252,22 +252,22 @@ video {
     padding: 20px 40px;
     background-color: #000;
     color: #0ff;
-    border: 4px solid #0ff;
+    border: 4px solid #e30ceb;
     border-radius: 0;
     cursor: pointer;
-    box-shadow: 0 0 8px #0ff, 0 0 16px #0ff;
+    box-shadow: 0 0 8px #e30ceb, 0 0 16px #e30ceb;  /*cyan is 0ff bbut let go for plave more vibe change to purple*/
     text-transform: uppercase;
     animation: pulse 1.5s infinite;
 }
 
 #play-button:hover {
-    background-color: #0ff;
+    background-color:#e30ceb;
     color: #000;
-    box-shadow: 0 0 12px #0ff, 0 0 24px #0ff;
+    box-shadow: 0 0 12px #e30ceb, 0 0 24px #e30ceb;
 }
 
 @keyframes pulse {
-    0% { box-shadow: 0 0 8px #0ff, 0 0 16px #0ff; }
-    50% { box-shadow: 0 0 12px #0ff, 0 0 24px #0ff; }
-    100% { box-shadow: 0 0 8px #0ff, 0 0 16px #0ff; }
+    0% { box-shadow: 0 0 8px #0ff, 0 0 16px #e30ceb; }
+    50% { box-shadow: 0 0 12px #0ff, 0 0 24px #e30ceb; }
+    100% { box-shadow: 0 0 8px #0ff, 0 0 16px #e30ceb; }
 }

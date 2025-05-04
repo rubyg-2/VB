@@ -143,18 +143,6 @@ transform: translate(-50%,-50%);
     margin-bottom: 20px; /* Adds space below the heading */
 }
 
-/* Cart icon positioning */
-#cart-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 40px; /* Adjust cart icon position to stay inside the page */
-    background: white;
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px gray;
-    cursor: pointer;
-    z-index: 10000; /* Ensure it’s above other elements */
-}
 
 /* Cart list */
 #cart {
@@ -179,6 +167,9 @@ transform: translate(-50%,-50%);
     font-size: 20px;
     margin-top: 20px;
 }
+
+
+
 
 #cart-icon {
     font-size: 36px;

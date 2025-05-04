@@ -11,14 +11,16 @@
     <!-- Preloader with local video -->
     <div id="preloader">
         <div id="video-container">
-           <video id="loader-video" width="100%" height="100%" autoplay>
+           <video id="loader-video" width="100%" height="100%" >
             <!--update with below to have the autoplay but now it has to be muted due to the browser features-->
            <!-- <video id="loader-video" width="100%" height="100%" autoplay muted playsinline>-->
 
                 <source src="assets/intro-video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-
+            <div id="play-button-overlay">
+            <button id="play-button">▶ Enter</button>
+        </div>
         </div>
     </div>
 
@@ -71,7 +73,19 @@
     <script>
         // Get the video element
         const video = document.getElementById('loader-video');
+        const playButton = document.getElementById('play-button');
+         const playOverlay = document.getElementById('play-button-overlay');
 
+    playButton.addEventListener('click', function() {
+        video.play().then(() => {
+            playOverlay.style.display = 'none';
+        }).catch((err) => {
+            alert("Unable to play video. Please click again or check your browser settings.");
+            console.error(err);
+        });
+    });
+
+        
         // Event listener for when the video ends
         video.addEventListener('ended', function() {
             // Fade out effect

@@ -235,3 +235,26 @@ video {
 .card:hover {
     transform: scale(1.05);
 }
+
+
+#play-button-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#play-button {
+    font-size: 24px;
+    padding: 12px 24px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#play-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}

@@ -208,3 +208,30 @@ video {
     display: none; /* Initially hidden */
     padding: 20px;
 }
+
+
+.intro-links {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.link-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: linear-gradient(135deg, #8a2be2, #ff69b4);
+    color: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}

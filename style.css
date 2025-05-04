@@ -251,7 +251,7 @@ video {
     font-size: 18px;
     padding: 20px 40px;
     background-color: #000;
-    color: #0ff;
+    color: #e30ceb;
     border: 4px solid #e30ceb;
     border-radius: 0;
     cursor: pointer;
@@ -267,7 +267,7 @@ video {
 }
 
 @keyframes pulse {
-    0% { box-shadow: 0 0 8px #0ff, 0 0 16px #e30ceb; }
-    50% { box-shadow: 0 0 12px #0ff, 0 0 24px #e30ceb; }
-    100% { box-shadow: 0 0 8px #0ff, 0 0 16px #e30ceb; }
+    0% { box-shadow: 0 0 8px #e30ceb, 0 0 16px #e30ceb; }
+    50% { box-shadow: 0 0 12px #e30ceb, 0 0 24px #e30ceb; }
+    100% { box-shadow: 0 0 8px #e30ceb, 0 0 16px #e30ceb; }
 }
